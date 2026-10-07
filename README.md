@@ -139,9 +139,6 @@
 <div class="container">
 
   <div class="card">
-
-    <h1>🛒 Comparador de precios</h1>
-
     <div class="subtitle">
       Descubre cuál producto te da más por tu dinero.
     </div>
@@ -158,7 +155,7 @@
           type="number"
           id="precio1"
           step="0.01"
-          placeholder="30"
+          placeholder="p.ej. 30"
         >
 
         <label>Cantidad</label>
@@ -166,12 +163,11 @@
           type="number"
           id="cantidad1"
           step="0.01"
-          placeholder="50"
+          placeholder="p.ej. 50"
         >
 
         <label>Unidad</label>
         <select id="unidad1">
-          <option value="mg">mg</option>
           <option value="g">g</option>
           <option value="kg">kg</option>
           <option value="ml">ml</option>
@@ -194,7 +190,7 @@
           type="number"
           id="precio2"
           step="0.01"
-          placeholder="70"
+          placeholder="p.ej. 70"
         >
 
         <label>Cantidad</label>
@@ -202,12 +198,11 @@
           type="number"
           id="cantidad2"
           step="0.01"
-          placeholder="100"
+          placeholder="p.ej. 100"
         >
 
         <label>Unidad</label>
         <select id="unidad2">
-          <option value="mg">mg</option>
           <option value="g">g</option>
           <option value="kg">kg</option>
           <option value="ml">ml</option>
@@ -242,7 +237,6 @@
 const conversiones = {
 
   peso: {
-    mg: 0.001,
     g: 1,
     kg: 1000,
     oz: 28.3495,
@@ -303,7 +297,6 @@ function elegirUnidad(precio, cantidadBase, tipo) {
   if (tipo === "peso") {
 
     const opciones = [
-      { unidad: "mg", factor: 0.001 },
       { unidad: "g", factor: 1 },
       { unidad: "kg", factor: 1000 }
     ];
